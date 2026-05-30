@@ -10,6 +10,7 @@ import Articles from "@/components/Articles";
 import SocialCampaign from "@/components/SocialCampaign";
 import Closing from "@/components/Closing";
 import About from "@/components/About";
+
 import {
   Sparkles,
   Heart,

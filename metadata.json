@@ -1,0 +1,8 @@
+{
+  "name": "Remix:  Cyberaggression",
+  "description": "An interactive educational campaign about online disinhibition, toxic behavior, and digital empathy, featuring an artistic vintage scrapbook collage aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

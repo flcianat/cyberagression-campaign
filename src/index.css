@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700;800&family=Reenie+Beanie&family=La+Belle+Aurore&family=Caveat:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font-sketch: "Reenie Beanie", cursive;
+  --font-cursive: "Brush Script MT", "Comic Sans MS", cursive;
+  
+  --color-cream: #fdfbf7;
+  --color-warm-beige: #f4efdf;
+  --color-kraft: #dccdb2;
+  --color-kraft-dark: #b8a383;
+  --color-artistic-border: #d9c5b2;
+  --color-vintage-black: #1a1a1a;
+  --color-dusty-blue: #8fa5b5;
+  --color-dusty-red: #c08272;
+  --color-faded-gray: #6b6761;
+  --color-artistic-accent: #A3B1C6;
+}
+
+/* Custom Scrapbook Texture Utilities */
+.scrapbook-bg {
+  background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #fdfbf7;
+}
+
+.bg-grid-paper {
+  background-color: var(--color-cream);
+  background-image: 
+    linear-gradient(rgba(180, 150, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 150, 110, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-lined-paper {
+  background-color: #faf8f5;
+  background-image: linear-gradient(rgba(130, 170, 210, 0.15) 1px, transparent 1px);
+  background-size: 100% 28px;
+  line-height: 28px;
+}
+
+/* Torn paper edge from Artistic Flair HTML */
+.torn-edge {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 98% 98%, 95% 95%, 92% 100%, 88% 96%, 85% 99%, 80% 95%, 75% 98%, 70% 94%, 65% 99%, 60% 95%, 55% 97%, 50% 94%, 45% 98%, 40% 95%, 35% 99%, 30% 96%, 25% 100%, 20% 95%, 15% 98%, 10% 95%, 5% 99%, 0% 95%);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.cursive {
+  font-family: var(--font-cursive);
+}
+
+/* Classic semi-transparent tape from Artistic Flair HTML */
+.tape {
+  background: rgba(217, 197, 178, 0.5);
+  transform: rotate(-3deg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Glitch design element helper */
+.glitch {
+  position: relative;
+  opacity: 0.8;
+}
+.glitch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 1px, transparent 2px);
+  pointer-events: none;
+}
+
+/* Masking Tape Overlay */
+.tape-overlay {
+  background: rgba(246, 237, 213, 0.65);
+  backdrop-filter: blur(0.5px);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+  border-left: 1px dashed rgba(0,0,0,0.1);
+  border-right: 1px dashed rgba(0,0,0,0.1);
+  transform: rotate(-1.5deg);
+}
+
+.tape-overlay-blue {
+  background: rgba(180, 205, 220, 0.65);
+  backdrop-filter: blur(0.5px);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+  border-left: 1px dashed rgba(0,0,0,0.1);
+  border-right: 1px dashed rgba(0,0,0,0.1);
+  transform: rotate(2deg);
+}
+
+/* Scrapbook Layer Drop Shadows */
+.shadow-collage-sm {
+  box-shadow: 1px 2px 3px rgba(30, 20, 10, 0.12);
+}
+
+.shadow-collage {
+  box-shadow: 2px 4px 8px rgba(30, 20, 10, 0.15);
+}
+
+.shadow-collage-lg {
+  box-shadow: 5px 10px 20px rgba(30, 20, 10, 0.18);
+}
+
+/* Polaroid Photo Frame */
+.polaroid-frame {
+  background: #fbfbfc;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Ripped paper edge simulation using CSS clip paths or custom SVGs */
+.ripped-card {
+  position: relative;
+  background: #ffffff;
+  border-top: 1px dashed #e2dcd0;
+  border-bottom: 1px dashed #e2dcd0;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom Scrollbar for vintage notebook look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-beige);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-kraft-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-vintage-black);
+}
+
+/* Distressed texture overlay */
+.distressed-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: radial-gradient(#000 1px, transparent 0), radial-gradient(#000 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+/* Subtle hand-drawn border effect */
+.hand-drawn-border {
+  border: 2px solid var(--color-vintage-black);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+

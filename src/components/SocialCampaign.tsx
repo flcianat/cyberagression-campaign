@@ -277,14 +277,16 @@ export default function SocialCampaign() {
       const res = await fetch(`/api/commitments/${id}`, {
         method: "DELETE",
       });
-      if (res.ok) {
-        setCards((prev) => prev.filter((c) => c.id !== id && c.dateStr !== id));
-      } else {
-        setCards((prev) => prev.filter((c) => c.id !== id && c.dateStr !== id));
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => null);
+        throw new Error(errorData?.error || "Failed to delete commitment");
       }
+
+      setCards((prev) => prev.filter((card) => card.id !== id));
     } catch (err) {
       console.error("Error deleting commitment:", err);
-      setCards((prev) => prev.filter((c) => c.id !== id && c.dateStr !== id));
+      alert("Gagal menghapus commitment. Coba lagi.");
     }
   };
 

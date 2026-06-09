@@ -535,7 +535,6 @@ export default function SocialCampaign() {
                         </p> */}
                       </div>
 
-                      {/* Only Delete Action remains, no edit button */}
                       <button
                         type="button"
                         onClick={() => handleDeleteCard(card.id)}

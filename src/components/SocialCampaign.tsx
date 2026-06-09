@@ -530,9 +530,9 @@ export default function SocialCampaign() {
                         <span className="inline-block px-2 py-0.5 bg-yellow-250 border border-vintage-black/15 text-[8.5px] font-mono font-black uppercase text-stone-800 tracking-widest leading-none">
                           {card.status}
                         </span>
-                        <p className="font-mono text-[8px] text-faded-gray pl-0.5">
+                        {/* <p className="font-mono text-[8px] text-faded-gray pl-0.5">
                           {card.dateStr}
-                        </p>
+                        </p> */}
                       </div>
 
                       {/* Only Delete Action remains, no edit button */}
